@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: pharma-size-predictor
+    runtime: python
+    # Free tier works but is memory-tight (see notes); bump to "starter" if it OOMs.
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      # Pin to 3.12 — the app imports `cgi`, which Python 3.13 removed.
+      # (The code degrades gracefully, but 3.12 avoids surprises + sklearn wheel issues.)
+      - key: PYTHON_VERSION
+        value: "3.12.3"
+      # Render injects PORT automatically; app.py already reads it.

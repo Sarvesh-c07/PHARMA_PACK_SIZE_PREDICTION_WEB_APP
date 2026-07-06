@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Runtime upload state (ephemeral on Render, don't commit)
+work/uploads/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IMPORTANT: do NOT ignore the trained model cache — it must be committed so
+# Render loads it instead of retraining on boot:
+!work/model_cache.pkl
+!work/model_cache.sig

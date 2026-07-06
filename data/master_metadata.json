@@ -1,0 +1,10 @@
+{
+  "built_from": "Train_Clean",
+  "source_workbook": "3S_Master_ML_Ready.xlsx",
+  "normalized_rows": 3210,
+  "training_candidate_rows_before_deduplication": 3210,
+  "training_rows_after_exact_deduplication": 3210,
+  "categorical_field": "Category (Form column dropped)",
+  "dimension_units": "millimetres (converted from source centimetres)",
+  "note": "Category is the single clean categorical field; the legacy free-text Form column was intentionally dropped."
+}
