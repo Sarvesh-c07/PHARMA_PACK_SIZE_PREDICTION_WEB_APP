@@ -1,0 +1,12 @@
+# Pharma Pack Dimension Predictor — Python dependencies
+# Install with:  pip install -r requirements.txt
+
+# PINNED so the pre-trained model cache (work/model_cache.pkl) unpickles cleanly.
+# The cache was built with scikit-learn 1.8.0 + numpy 2.x. If these drift, the
+# model fails to load and the app silently RETRAINS on every boot (very slow on
+# small instances). Do not loosen scikit-learn unless you also retrain the cache.
+scikit-learn==1.8.0
+numpy>=2.0,<3
+
+pandas>=2.0
+openpyxl>=3.1        # reading .xlsx / .xlsm source workbooks
